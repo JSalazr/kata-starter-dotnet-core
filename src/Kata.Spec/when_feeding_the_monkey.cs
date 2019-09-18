@@ -42,6 +42,19 @@ namespace Kata.Spec
         static Calculator _systemUnderTest;
         static int _result;
     }
+
+    public class when_user_input_is_two_numbers
+    {
+        Establish _context = () =>
+        {
+            _systemUnderTest = new Calculator();
+        };
+
+        Because of = () => { _result = _systemUnderTest.Add("1,3"); };
+        It should_return_sum_of_all = () => { _result.Should().Be(4); };
+        static Calculator _systemUnderTest;
+        static int _result;
+    }
 }
 
 //    2. Given the user input is one number when calculating the sum then it should return the same number. (example "3" should equal 3)
