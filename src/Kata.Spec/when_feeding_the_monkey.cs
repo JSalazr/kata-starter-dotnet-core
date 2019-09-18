@@ -16,8 +16,8 @@ namespace Kata.Spec
         It should_have_the_food_in_its_belly = () =>
             _systemUnderTest.Belly.Should().Contain("banana");
     }
-
-    public class when_user_input_is_empty
+    
+    public class when_user_input_is_zero
     {
         Establish _context = () =>
         {
