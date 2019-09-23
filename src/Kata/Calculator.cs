@@ -11,9 +11,11 @@ namespace Kata
                 return 0;
             var separator = new []{",", "\n"};
             if (s.StartsWith("//"))
-            {
+            {    
+                // //[*][%]\n1*2%3
+                // *]%]
                 var strings = s.Split("\n");
-                separator = new[] {strings.First().Replace("//", "").Replace("[","").Replace("]","")};
+                separator = strings.First().Replace("//", "").Replace("[","").Split("]");
                 s = strings.Last();
             }
             var numbers = s.Split(separator, StringSplitOptions.None).Select(int.Parse).Where(x=>x<1001);
