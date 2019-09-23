@@ -18,11 +18,12 @@ namespace Kata
             }
             var numbers = s.Split(separator, StringSplitOptions.None).Select(int.Parse);
             var negatives = numbers.Where(x => x < 0);
+            var valid_numbers = numbers.Where(x => x > 0 && x < 1001);
             if (negatives.Any())
             {
                 throw new Exception($@"Negatives not allowed: {string.Join(", ", negatives)}");
             }
-            return numbers.Sum();
+            return valid_numbers.Sum();
         }
     }
 }
