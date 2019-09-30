@@ -163,6 +163,3 @@ namespace Kata.Spec
     }
 }
 
-
-
-//    11. Given the user input is multiple numbers with multiple custom delimiters when calculating the sum then it should return the sum of all the numbers. (example “//[*][%]\n1*2%3” should return 6)
